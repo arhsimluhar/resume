@@ -1,0 +1,211 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Curriculum Vitae
+% LaTeX Template
+% Version 1.0 (18/7/12)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, oneside, final]{scrartcl} % Paper options using the scrartcl class
+
+\usepackage{scrpage2} % Provides headers and footers configuration
+\usepackage{titlesec} % Allows creating custom \section's
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{fontspec} % Allows font customization
+\usepackage{enumitem} % removes restriction put on left margin
+\usepackage{hyperref} %package to write url
+
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont{Adobe Garamond Pro} % Main document font
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
+
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+
+\addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\textheight}{1.5in} % Adjust the text height - less whitespace at the bottom of the page
+
+\newcommand{\gray}{\rowcolor[gray]{.90}} % Custom highlighting for the work experience and education sections
+
+%----------------------------------------------------------------------------------------
+% ÊFOOTER SECTION
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
+
+\cofoot{
+\addfontfeature{LetterSpace=20.0}\fontsize{12.5}{17}\selectfont % Letter spacing and font size
+
+SMVDU {\large\textperiodcentered} Katra {\large\textperiodcentered} India 182302\\ % Your mailing address
+ \ {\Large\Telefon} +91-7298242669 % Your email address and phone number
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{center} % Center everything in the document
+
+%----------------------------------------------------------------------------------------
+% ÊHEADER SECTION
+%----------------------------------------------------------------------------------------
+
+{\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape Rahul Mishra} % Your name at the top
+\begin{center}% Your personal details after your name  
+Junior Undergraduate\\
+School of Computer Science and Engineering\\
+Shri Mata Vaishno Devi Unversity, J\&K, India\\
+{\Large\Letter} rahul.mishra2003@gmail.com\space{}\space{}   {\Large\Telefon} +91-7298242669 \\
+\end{center}
+
+\vspace{0.5cm} % Extra whitespace after the large name at the top
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+\section{Objective}
+
+A position in the field of computers with special interests in software engineering , \\ and Artificial Intelligence.
+
+%----------------------------------------------------------------------
+%   AREAS OF INTEREST
+%-----------------------------------------------------------------
+\section{Areas Of Interest}
+\begin{description}[leftmargin=\dimexpr 26pt-.5in]
+\setlength{\itemindent}{.75in}
+  \item[$\bullet$]  {\bfseries Web Application Development}
+  \item[$\bullet$]  {\bfseries Competitive Programming}
+  \item[$\bullet$]  {\bfseries Big Data}
+  \item[$\bullet$]  {\bfseries Artificial Intelligence}(Natural Language Processing \& Machine Learning)
+  
+  
+\end{description}
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{August 2012 --- Present}\\
+\gray Degree & \textbf{Bachelor of Compter Science and Enginering}\\
+\gray CGPA & \textbf{7.6}\\
+\gray University & \textbf{Shri Mata Vaishno Devi University} \hfill J\&K, India\\
+%& Extra information about degree
+\end{tabularx}
+
+\vspace{12pt}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{April 2010 --- March 2011}\\
+\gray Degree & \textbf{Senior Secondary}\\
+\gray Percentile & \textbf{86.3\%}\\
+\gray School & \textbf{Mount Olivet Sr. Sec. School} \hfill New Delhi, India\\
+%& Extra information about degree
+\end{tabularx}
+
+\vspace{12pt}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{April 2008 --- March 2009}\\
+\gray Degree & \textbf{Metriculate}\\
+\gray Percentile & \textbf{87\%}\\
+\gray School & \textbf{Mount Olivet Sr. Sec. School} \hfill New Delhi, India\\
+%& Extra information about degree
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Computer Languages & C/C++, Python, Java, SHELLScript, R, HTML, JavaScript, CSS, PHP,  \\
+\space{} & MATLAB, Octave. \\\\
+%Protocols \& APIs & XML, JSON, SOAP, REST. \\
+Databases & MySQL, PostgreSQL, MongoDB. \\\\
+Tools & Github/Gitlab,Django, NLTK, Pandas, NetBeans, Eclipse, CodeBlocks, \\ 
+\space{} & \LaTeX, MS-Office.\\\\
+OSeS & Ubuntu, Elementary, Windows, Kali, RedHat. 
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%-----------------------------------------------------------------
+\section{Projects}
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Project & \textbf{Plant Soil Moisture Controller}\\
+\gray Supervisor & \textbf{Dr. Ajay Kaul} \hfill Katra, India\\
+\gray University & \textbf{SMVDU}\\
+\gray Description & \textbf{Deals with watering and maintaining adequate moisture level in plant soil.}
+\end{tabularx}\\
+\vspace{0.75cm}
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Project & \textbf{ demo}\\
+\gray Supervisor & \textbf{Dr. Sunanda Gupta} \hfill Katra, India\\
+\gray University & \textbf{SMVDU}\\
+\gray Description & \textbf{1. To provide details of accommodation}\\
+\gray \space{} & \textbf{2. Access the services to customer faster}\\
+
+					 
+
+
+\end{tabularx}\\
+
+%---------------------------------------------------------------------------------------------------------
+% WORKSHOPS
+%----------------------------------------------------------------------------------------------------------\
+\section{Workshops \& Technical Events}
+\begin{itemize}
+
+\item[$\bullet$] {\large Attended Aakash Android Application programming workshop conducted by IIT BOMBAY
+from 23-24 Feb \& 2nd-3rd Mar 2013. The objective of the workshop was to provide students
+,an insight into emerging field of Android App development.}
+\item[$\bullet$] {\large Member of the co-ordinating team that conducted workshops during weeklong celebration of Software Freedom Day(2014) at Shri Mata Vaishno Devi University.}
+\item[$\bullet$] {\large Campus ambassador of CodeChef at Shri Mata Vaishno Devi University and organiser of programming workshops, weekly and monthly online programming contests .}
+\item[$\bullet$] {\large Techical committee head in Resurgence'14 (Cultural Youth fest) of Shri Mata Vaishno Devi University.}
+\item[$\bullet$] {\large Event Organiser in Titiksha'15 (Technical fest) of Shri Mata Vaishno Devi University.}
+\end{itemize}
+
+%------------------------------------------------------------------------------------------------------------
+%   CO-CURRICULAR ACTIVITIES
+%------------------------------------------------------------------------------------------------------------
+\section{Co-curricular Activities}
+\begin{enumerate}
+\item {\large {\bfseries First Prize} in Python Geek Event during Titiksha'13(inter university)
+at SMVDU, J\&K.}
+\item {\large }
+\item {\large Received {\bfseries First Prize} in inter university skit competition in Resurgence'14 (Youth Fest).}
+\item {\large {\bfseries Second Prize} in intra university sports competition in Resurgence'14 for \textit{Futsual}.}
+\end{enumerate}
+%-------------------------------------------------------------------------------------------------------------
+%    PERSONAL INFORMATION
+%-------------------------------------------------------------------------------------------------------------
+\section{Personal Information}
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{3.0cm}X}
+\gray \textbf{DOB} & \space{}\space{}{18\textsuperscript{th} September, 1993}\\
+\gray \space{} & \space{}\\
+
+\gray \textbf{Sex} & {Male}\\
+\gray \space{} & \space{}\\
+\gray \textbf{Nationality} & {India}\\
+\gray \space{} & \space{}\\
+\gray \textbf{Permanent Address} & {House No 189, Street No 7, Sant Nagar, Burari, Delhi-110084, India (+91-7298242669)}\\
+\gray \space{} & \space{}\\
+\gray \textbf{Correspondence Address} & {D-216 Vindhyachal hostel, Shri Mata Vaishno Devi University
+Katra, Jammu \& Kashmir, India (+91-7298242669)}\\
+
+\end{tabularx}\\
+%---------------------------------------------------------------------------------------------------------------
+%   REFRENCES
+%-------------------------------------------------------------------------------------------------------------
+\section{Refrences}
+\end{center}
+
+\end{document}
