@@ -1,0 +1,161 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{tfrupee}
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Rahul \textsc{Mishra}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Delhi, India  | 18 september 1993 \\
+    \textsc{Address:}   & 189/7, Sant Nagar, Burari, India \\
+    \textsc{Phone:}     & +91 7298242669, +91 9953666534\\
+    \textsc{email:}     & \href{mailto:rahul.mishra2003@gmail.com}{rahul.mishra2003@gmail.com}
+\end{tabular}
+
+%Section: Career Objective
+\section{Career Ojective}
+\begin{flushleft}
+To pursue a challenging career and be part of a progressive organization that gives scope to enhance my knowledge, skills and to reach the pinnacle in the computing and research field with sheer determination, dedication and hard work.
+\end{flushleft}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{August} 2012 & Currently pursuing Bachelor of Technology in \textsc{Computer Science, }\\& \textbf{SMVD University}, Kakryal\\
+& Major: Computer Science\\
+&\normalsize \textsc{cgpa}: 7.57/10 \\ & \\
+\textsc{May} 2011& Intermediate  ,\normalsize\textbf{Mount Olivet Sr. Sec. School}, Delhi\\
+&\normalsize \textsc{Percentage}: 86.3\% \\&\\
+\textsc{May} 2009& Matriculate , \textbf{Mount Olivet Sr. Sec School}, Delhi\\
+&\textsc{Percentage}: 87\% \\&\\
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+ \textsc{Aug.} 2012 & Scholarship for Undergraduate students with an outstanding curriculum. \normalsize\\
+ \textsc{Jul.} 2013 & Summer Training in \normalsize\textbf{Network Management And Security} (\normalsize\textbf{Hewlett-Packard})\normalsize\\
+ \textsc{Dec.} 2013 & \normalsize\textbf{6.00.1x: Introduction to Computer Science and Programming Using Python},\\ & Organised by \normalsize\textbf{edX}.\\
+ \textsc{Mar.} 2014 & \normalsize\textbf{Computer Networks}, Organised by \normalsize\textbf{Coursera}.\\
+ \textsc{Jul.} 2014 & First place , Event \normalsize\textbf{Python Geek}, Titiksha, Technical Festival of SMVD University.\normalsize\\
+ \textsc{Jul.} 2014 & Second place , Event \normalsize\textbf{Debuggage}, Titiksha, Technical Festival of SMVD University.\normalsize\\
+ \textsc{Jul.} 2014 & Second place , Event \normalsize\textbf{Kill-Em}, Titiksha, Technical Festival of SMVD University.\normalsize\\
+ \textsc{Jul.} 2014 & Third place , Event \normalsize\textbf{Ad-Web}, Titiksha, Technical Festival of SMVD University.\normalsize\\
+ \textsc{Jul.} 2014 & \normalsize\textbf{Data Structures and Algorithms},Conducted by  \normalsize\textbf{IIT Madras} Under  \normalsize\textbf{NPTEL} .\normalsize\\
+\end{tabular}
+
+
+%Section: Workshops
+\section{Workshops}
+\begin{tabular}{rl}
+ \textsc{Feb.} 2013 & {\normalsize\textbf{Aakash Android Application Programming Workshop ,}}(\textsc conducted by \normalsize\textbf{IIT Bombay})\\
+\end{tabular}
+
+%Section: Volunteer
+\section{Volunteer}
+\begin{tabular}{rl}
+ \textsc{Apr.} 2014 & Technical Coordinator,\normalsize\textbf{Resurgence, Annual youth Festival} of SMVD University\\
+ \textsc{Oct.} 2014 & Campus Ambassador,\normalsize\textbf{   CodeChef}, for \normalsize\textbf{CodeChef Campus Chapter} of SMVD University\\
+\end{tabular}
+
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Hindi:}&Mothertongue\\
+\textsc{English:}&Fluent\\
+\end{tabular}
+
+%Section: Programming Skills
+\section{Skills }
+\begin{tabular}{rl}
+ \textsc{Programming Languages:}& C, C++, Python, Java, HTML5, CSS, PHP,\\ & JavaScript, XML , Ruby, ShellScript, R.
+ \\ &\\
+  \textsc{Databases:}&  MySQL, MongoDB.
+ \\ &\\
+\textsc{Software Packages:}& NetBeans, Eclipse, Git, CodeBlocks, IIS ,WAMP, \\& Brackets,SublimeText2, Qt Creator, Ms-Office, \\ & VisualSVN Server, Canopy, MATLAB, Octave, \\&\\
+\textsc{Platforms:}& Windows XP/7/8.1, Ubuntu, RHEL .\\
+\end{tabular}
+
+%Section: Projects
+\section{Projects}
+\begin{tabular}{rl}
+ \textsc{1.} & {\normalsize\textbf{Plant Soil Moisture Controller}}\\ & \textsc Atmega8 Microcontroller based device to maintain adequate levels of moisture \\ & in agricultural fields.\\ & \\
+ \textsc{2.} & {\normalsize\textbf{ Store Management System}}\\ & \textsc Java Based Project for maintaining Shop transactions \& Records \\ & \normalsize\textbf{github.com/rahulmishra007/SMS}\\ & \\ 
+ \textsc{3.} & {\normalsize\textbf{Vcrawl email Scanner}}\\ & \textsc Python Based application that scans the websites for emails, stores these emails \\ & with persons name against it in DBMS.(currently in Development). \\ &
+ \normalsize\textbf{github.com/rahulmishra007/Vcrawl}\\ & \\
+ 
+\end{tabular}
+
+%Section: Areas of Interest
+\section{Areas of Interest}
+\begin{itemize}
+  \item Machine Learning
+  \item Natural language Processing
+  \item Big Data
+  \item Image Processing
+\end{itemize}
+
+%Section: WEB PRESENCE 
+\section{Web Presence }
+\begin{itemize}
+  \item Github Profile : github.com/rahulmishra007
+  \item Linkedin Profile : in.linkedin.com/in/rahulmishra01
+  \item CodeChef Profile : codechef.com/users/rahul\_mishra01
+\end{itemize}
+
+\end{document}
