@@ -1,214 +1,151 @@
 \documentclass[a4paper,10pt]{article}
 
-%A Few Useful Packages
-\usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{tfrupee}
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
-\RequirePackage{color,graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
 
-%Setup hyperref package, and colours for links
-\usepackage{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+% Other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
 
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-\setmainfont[
-SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
-]
-{Fontin.otf}
-%%%
+% Tabularx environment
+\usepackage{tabularx}
 
+% For lists within experience section
+\usepackage{enumitem}
+
+% Centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+% To prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+% Custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+% CV Sections inspired by: 
+% http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
-%Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
+\titlespacing{\section}{1pt}{2pt}{2pt}
 
-%Italian hyphenation for the word: ''corporations''
-\hyphenation{im-pre-se}
+% For publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 
-%-------------WATERMARK TEST [**not part of a CV**]---------------
-\usepackage[absolute]{textpos}
+% Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
 
-\setlength{\TPHorizModule}{30mm}
-\setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{2mm}{0.65\paperheight}
-\setlength{\parindent}{0pt}
+% For social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
 
-%--------------------BEGIN DOCUMENT----------------------
+% For underline
+\usepackage[normalem]{ulem}
+
+% Set main font
+\setmainfont{TeX Gyre Heros}  % Ensure Arial is installed and supports required shapes
+
+% Use a different font for small caps if Arial doesn't support it
+% \setsansfont{Linux Biolinum O}  % Example of a font with small caps
+
 \begin{document}
 
-\pagestyle{empty} % non-numbered pages
+% Non-numbered pages
+\pagestyle{empty} 
 
-\font\fb=''[cmr10]'' %for use with \LaTeX command
+% Allow more flexible line breaking to avoid overfull/underfull boxes
+\sloppy
 
-%--------------------TITLE-------------
-\par{\centering
-		{\Huge Rahul \textsc{Mishra}
-	}\bigskip\par}
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Rahul Mishra} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{{{{\faMapMarker} Delhi, India}} $|$}
+\textcolor[HTML]{371e77}{{{{\faEnvelope} \href{mailto:rahul.mishra2003@gmail.com}{rahul.mishra2003@gmail.com}}} $|$}
+\textcolor[HTML]{371e77}{{{\faMobile} +91 9953-666-534}}
 
-%--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-\section{Personal Data}
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGithub} \href{https://github.com/arhsimluhar}{github.com/arhsimluhar}}}} $|$
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faLinkedin} \href{https://linkedin.com/in/arhsimluhar}{linkedin.com/in/arhsimluhar}}}}
+\end{tabularx}
 
-\begin{tabular}{rl}
-    \textsc{Place and Date of Birth:} & Delhi, India  | 18 september 1993 \\
-    \textsc{Address:}   & H.No. 189, Street No. 7, Sant Nagar Main Market, Burari, Delhi-84 \\
-    \textsc{Phone:}     & +91 9953666534\\
-    \textsc{email:}     & \href{mailto:rahul.mishra2003@gmail.com}{rahul.mishra2003@gmail.com}
-\end{tabular}
-
-
-%Section: Languages
-\section{Languages}
-\begin{tabular}{rl}
- \textsc{Hindi:}&Mothertongue\\
-\textsc{English:}&Fluent\\
-\end{tabular}
+\section{Summary}
+Principal Software Engineer with 8+ years of experience in backend engineering, desktop applications, distributed systems, and cloud infrastructure. Proven leadership in team management, system design, and cost optimization. Expert in mentoring engineers, migrating complex systems to the cloud, and advocating engineering excellence across all phases of the SDLC.
 
 
+\section{Technical Skills}
+\color[HTML]{1C033C}\textbf{Languages:} C/C++, Go, Python, Rust\\[3pt]
+\color[HTML]{1C033C}\textbf{Cloud \& DevOps:} AWS, Docker, Jenkins, Terraform, AWS CDK. \\[3pt]
+\color[HTML]{1C033C}\textbf{Databases \& Processing:} PostgreSQL, Hive, Redis, DynamoDB. \\[3pt]
+\color[HTML]{1C033C}\textbf{Frameworks \& Tools:} Django, Gin, Grafana, Looker, OpenTelemetry, Jira, CMake, Bash. \\[3pt]
 
-%Section: Career Objective
-\section{Career Ojective}
-\begin{flushleft}
-To pursue a challenging career and be part of a progressive organization that gives scope to enhance my knowledge, skills and to reach the pinnacle in the computing and research field with sheer determination, dedication and hard work.
-\end{flushleft}
+% Experience
+\section{Work Experience}
 
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Autodesk, Bangalore}} \hfill \color[HTML]{371e77} Dec 2024 - Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Principal Engineer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Leading a team 6 engineers, owning sprint planning, backlog refinement, and on-time delivery of scalable backend services.
+        \item Advocating and enforcing best practices in code quality, CI/CD, observability and security.
+        \item Architecting backend systems with focus on scalability, cost-efficieny and maintainability.
+        \item AWS, EC2, S3, EMR, Hive, Presto, Qubole, Kafka, Druid, Zookeeper, MySQL, Kubernetes, Docker, Bazel
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
 
-%Section: Areas of Interest
-\section{Areas of Interest}
-\begin{itemize}
-  \item {\large\textbf{Application Development}}
-  \item {\large\textbf{Algorithms and Data Structures}}
-  \item {\large\textbf{Machine Learning}}
-  \begin{itemize}
-    \item Cognitive Systems
-  \end{itemize}
-  \item {\large\textbf{Image Processing}}
-  \begin{itemize}
-    \item Pattern Recognition
-    \item Visual Search
-  \end{itemize}
-\end{itemize}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{371e77}\textbf{\textit{Senior Software Engineer}}\ \hfill \color[HTML]{4B28A4} Nov 2019 - Nov 2024\\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Designed and implemented a system to detect over 1M+ non-compliant users, aiding license compliance.
+        \item Drove secure development practices as the team's Security Champion, aligning with enterprise security goals.
+        \item Developed binary tampering detection solution, reducing pirated softwares by 70\%.
+        \item Promoted engineering excellence across design, testing, and deployment pipelines.
+        \item AWS, EC2, S3, EMR, Hive, Presto, Qubole, Kafka, Druid, Zookeeper, MySQL, Kubernetes, Docker, Bazel
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
 
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{{Attivo Networks, Bangalore}} \hfill \color[HTML]{371e77} July 2016 - Nov 2019 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Engineered dynamic deception endpoints used by 100+ enterprise customers for threat detection.
+        \item Reduced CI/CD pipeline flakiness by 60\%, enabling faster and more reliable releases.
+        \item Mentored junior engineers, enhancing team productivity and capability.
+        \item <mention tools here>      
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
 
-
-
-%Section: Education
+% Education
 \section{Education}
-\begin{tabular}{rl}	
- \textsc{May} 2016 & Bachelor of Technology in \textsc{Computer Science, }\\& \textbf{Shri Mata Vaishno Devi University}, Kakryal\\
-& Major: Computer Science\\
-&\normalsize \textsc{cgpa}: 7.81/10 \\ & \\
-\textsc{May} 2011& Intermediate  ,\normalsize\textbf{Mount Olivet Sr. Sec. School}, Delhi\\
-&\normalsize \textsc{Percentage}: 86.3\% \\&\\
-\textsc{May} 2009& Matriculate , \textbf{Mount Olivet Sr. Sec School}, Delhi\\
-&\textsc{Percentage}: 86.8\% \\&\\
-\end{tabular}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{\textcolor[HTML]{1C033C}{Shri Mata Vaishno Devi University, J\&K}} & 
+\textcolor[HTML]{371e77}{Aug 2012 -- May 2016} \\
+\textcolor[HTML]{371e77}{B.Tech. in Computer Science and Engineering} & 
+\textcolor[HTML]{4B28A4} {\textbf{CGPA: 7.81/10}} \\
+\end{tabularx}
 
-%Section: Internships
-\section{Interships}
-\begin{tabular}{rl}
- \textsc{May.} 2015 & Summer Internship in \large\textbf{Computer Graphics} (\normalsize\textbf{Bhabha Atomic Research Centre })\normalsize\\ & The summer internship dealt with Rendering of RAM Assembly and Snout Plug \\ & Components for simulation application using OpenGL and Microsoft Foundation\\ & Class Libraries. Application was used to demonstrate the working of fueling \\& assembly parts. \\ 
- 
-\end{tabular}
+% Leadership and Volunteering
+\section{Awards \& Certifications}
+\begin{itemize}[leftmargin=1.5em, label={}]
+    \item \textbf{Applause Recognition – Autodesk} \\
+    Awarded for key contributions to renewals of client accounts valued at \$300 M.
 
+    \item \textbf{Autobucks Awards – Autodesk} \\
+    Recognized for leading strategic initiatives that drove measurable business and operational impact.
 
-%Section: Projects
-\section{Projects}
-\begin{tabular}{rl}
- \textsc{1.} & {\large\textbf{Designining And Maintaining Secure Corporate Network [Jul. 2013]}}\\ & \textsc Designed and Simulated Secured corporate Network for a company on Cisco Packet\\ & tracer and maintained it using various protocols and technologies like DNS, AAA, \\ & KFSENSOR, VLAN, HTTP, FTP, ACL, NAT etc.\\ & \\ &
- \normalsize\textbf{Technologies Used:}\\ & Cisco Packet Tracer Simulator.\\ &
- \normalsize\textbf{github.com/rahul1809/Corporate-Network}\\ & \\
-
- \textsc{2.} & {\large\textbf{Plant Soil Moisture Controller [Nov. 2014]}}\\ & \textsc Atmega8 Microcontroller based device that used Soil Hygrometer Module to maintain \\ & adequate levels of moisture for quality growth of Plants and indicated the same by \\ & LED Matrix Display ,the same can be used in Agricultural Fields to automate the process \\ & of watering the plants reducing human labor.
- \\ & \\ &
- \normalsize\textbf{Technologies Used:}\\ & Embedded C.\\ & \\ 
- \textsc{3.} & {\large\textbf{ Store Management System [Dec. 2014]}}\\ & \textsc Java Based GUI Application that uses Mysql as Database ,made for any General Shopkeeper\\ & ,Application keeps the records about Customers, Dealers, Items.Their details can modified \\ & in anyway at later stage.Application allows to keeps tracks all transactions (sell/purchase)\\ & ,In addition we allow to credit system for both customer and dealer and charge interest on \\ & the same accordingly.\\ & \\ &
- \normalsize\textbf{Technologies Used:}\\ & JAVA,MySQL.\\ &
- \normalsize\textbf{github.com/rahul1809/SMS}\\ & \\ 
- \textsc{4.} & {\large\textbf{Vcrawl email Scanner [Dec. 2014]}}\\ & \textsc Visual Basic Based application that scans the websites for emails, stores these emails. \\ & \\ & 
- \normalsize\textbf{Technologies Used:}\\ & VB .Net\\ &
- \normalsize\textbf{github.com/rahul1809/Vcrawl}\\ & \\
-
-\textsc{5.} & {\large\textbf{Image Encryption using Matrix Transmutaion [Dec. 2015]}}\\ & \textsc In this project,we are using various encryption schemes  for introducing high confusion and \\ & diffusion rates for strong encryption of images under consideration. \\ & \\ &
- \normalsize\textbf{Technologies Used:}\\ & MATLAB\\ &
- \normalsize\textbf{github.com/rahul1809/ImageEncrypt/}\\ & \\
-
-\textsc{6.} & {\large\textbf{Music Categorizer based on Genre [May. 2016]}}\\ & \textsc Project Based on Machine Learning Techniques, that learns from various features of music \\ & and classify them according to genres using classification algorithm, in addition to that \\ & lyrical analysis of the song further improved the accuracy of the system. \\ & \\ &
- \normalsize\textbf{Technologies Used:}\\ & Numpy,Scipy,Matplotlib,Scikit-learn\\ &
- \normalsize\textbf{github.com/rahul1809/MusicCategorizer}\\ & \\
-
-\end{tabular}
-
-
-%Section: Scholarships and additional info
-\section{Scholarships and Certificates}
-\begin{tabular}{rl}
- \textsc{Aug.} 2012 & Scholarship for Undergraduate students with an outstanding curriculum. \normalsize\\
- \textsc{Dec.} 2013 & \normalsize\textbf{6.00.1x: Introduction to Computer Science and Programming Using Python},\\ & Organised by \normalsize\textbf{edX}.\\
- \textsc{Mar.} 2014 & \normalsize\textbf{Computer Networks}, Organised by \normalsize\textbf{Coursera}.\\
- \textsc{Jul.} 2014 & First place , Event \normalsize\textbf{Python Geek}, Titiksha, Technical Festival of SMVD University.\normalsize\\
- \textsc{Jul.} 2014 & Second place , Event \normalsize\textbf{Debuggage}, Titiksha, Technical Festival of SMVD University.\normalsize\\
- \textsc{Jul.} 2014 & Second place , Event \normalsize\textbf{Kill-Em}, Titiksha, Technical Festival of SMVD University.\normalsize\\
- \textsc{Jul.} 2014 & Third place , Event \normalsize\textbf{Ad-Web}, Titiksha, Technical Festival of SMVD University.\normalsize\\
- \textsc{Jul.} 2014 & \normalsize\textbf{Data Structures and Algorithms},Conducted by  \normalsize\textbf{IIT Madras} Under  \normalsize\textbf{NPTEL} .\normalsize\\
-\end{tabular}
-
-
-%Section: Workshops
-\section{Workshops}
-\begin{tabular}{rl}
- \textsc{Feb.} 2013 & {\normalsize\textbf{Aakash Android Application Programming Workshop ,}}(\textsc conducted by \normalsize\textbf{IIT Bombay})\\
-\end{tabular}
-
-%Section: Summer Training
-\section{Summer Training}
-\begin{tabular}{rl}
- \textsc{Jul.} 2013 & Summer Training in \large\textbf{Network Management And Security} (\normalsize\textbf{Hewlett-Packard})\normalsize\\ & The summer training dealt with giving an introduction about various Networking \\ & Technologies that are being using widely, various Technologies and Tools that are\\ & used while setting up any standard network for any platform and lastly we learned \\ & basics of how to secure these networks from Cyber Attacks.   \\
- 
-\end{tabular}
-
-%Section: Volunteer
-\section{Volunteer}
-\begin{tabular}{rl}
- \textsc{Apr.} 2014 & Technical Coordinator,\normalsize\textbf{Resurgence, Annual youth Festival} of SMVD University\\
- \textsc{Oct.} 2014 & Campus Ambassador,\normalsize\textbf{   CodeChef}, for \normalsize\textbf{CodeChef Campus Chapter} of SMVD University\\
-  \textsc{Feb.} 2015 & Technical Support, Cultural Program,Hindi Vigyaan Sahitya Parishad, \\  & Bhabha Atomic Research Centre, at SMVD University\\
- \textsc{Mar.} 2015 & Event Coordinator,\normalsize\textbf{  ,Titiksha, Technical Fest} of SMVD University. \\
- \textsc{Apr.} 2015 & Student Coordinator, Control Room Committee,Resurgence, \\ & Annual youth Festival of SMVD University\\
-
-\end{tabular}
-
-
-%Section: Programming Skills
-\section{Skills }
-\begin{tabular}{rl}
- \textsc{Programming Languages:}& C, C++, Python,Java, ShellScript, VB. Net.
- \\ &\\
-  \textsc{Databases:}&  MySQL.
- \\ &\\
-  \textsc{Libraries:}&  OpenGL, Numpy, Scipy, Sklearn, Matplotlib.
- \\ &\\
-\textsc{Software Packages:}& Eclipse, Git, CodeBlocks, SublimeText2,\\ & Qt Creator, Ms-Office, Canopy, MATLAB, \\ & Octave,Cisco Packet Tracer.\\&\\ 
-\textsc{Platforms:}& Windows XP/7/8.1/10, Ubuntu, RHEL .\\
-\end{tabular}
-
-%Section: WEB PRESENCE 
-\section{Web Presence }
-\begin{itemize}
-  \item Github Profile : github.com/rahul1809
-  \item Linkedin Profile : in.linkedin.com/in/rahulmishra01
-  \item CodeChef Profile : codechef.com/users/rahul\_mishra01
+    \item \textbf{Udacity Machine Learning Nanodegree}  Udacity Inc.
 \end{itemize}
-
 
 \end{document}
