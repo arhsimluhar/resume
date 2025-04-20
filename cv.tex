@@ -8,7 +8,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
-\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+\usepackage[scale=0.85, top=.5in, bottom=.5in]{geometry} %Adjust Margins
 
 % Tabularx environment
 \usepackage{tabularx}
@@ -40,7 +40,6 @@
 % Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
 \color[HTML]{110223}%{1C033C}
-\addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
 % For social icons
@@ -65,38 +64,38 @@
 \sloppy
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\color[HTML]{1C033C} \Huge{Rahul Mishra} \\[6pt]
+\color[HTML]{1C033C} \Huge{Rahul Mishra} \\[4pt]
 \\
 \textcolor[HTML]{371e77}{{{{\faMapMarker} Delhi, India}} $|$}
 \textcolor[HTML]{371e77}{{{{\faEnvelope} \href{mailto:rahul.mishra2003@gmail.com}{rahul.mishra2003@gmail.com}}} $|$}
-\textcolor[HTML]{371e77}{{{\faMobile} +91 9953-666-534}}
-
-\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGithub} \href{https://github.com/arhsimluhar}{github.com/arhsimluhar}}}} $|$
-\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faLinkedin} \href{https://linkedin.com/in/arhsimluhar}{linkedin.com/in/arhsimluhar}}}}
+\textcolor[HTML]{371e77}{{{\faMobile} +91 9953-666-534}} \\
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faGithub} \href{https://github.com/arhsimluhar}{https://github.com/arhsimluhar}}}} $|$
+\textcolor[HTML]{371e77}{\underline{{\raisebox{-0.05\height}{\faLinkedin} \href{https://linkedin.com/in/arhsimluhar}{https://linkedin.com/in/arhsimluhar}}}}
 \end{tabularx}
 
 \section{Summary}
-Principal Software Engineer with 8+ years of experience in backend engineering, desktop applications, distributed systems, and cloud infrastructure. Proven leadership in team management, system design, and cost optimization. Expert in mentoring engineers, migrating complex systems to the cloud, and advocating engineering excellence across all phases of the SDLC.
+Principal Software Engineer with 8+ years of experience architecting and scaling backend systems, desktop applications, distributed systems, and cloud native infrastructure. Proven leader in driving engineering excellence, system performance, cost optimization, and DevSecOps adoption. Passionate mentor and proactive advocate for secure, reliable, and scalable software design. \\
 
 
 \section{Technical Skills}
-\color[HTML]{1C033C}\textbf{Languages:} C/C++, Go, Python, Rust\\[3pt]
-\color[HTML]{1C033C}\textbf{Cloud \& DevOps:} AWS, Docker, Jenkins, Terraform, AWS CDK. \\[3pt]
-\color[HTML]{1C033C}\textbf{Databases \& Processing:} PostgreSQL, Hive, Redis, DynamoDB. \\[3pt]
-\color[HTML]{1C033C}\textbf{Frameworks \& Tools:} Django, Gin, Grafana, Looker, OpenTelemetry, Jira, CMake, Bash. \\[3pt]
+\color[HTML]{1C033C}\textbf{Languages:} C/C++, Go, Python, Rust \\[3pt]
+\color[HTML]{1C033C}\textbf{Cloud \& DevOps:} AWS, Docker, Jenkins, Terraform \\[3pt]
+\color[HTML]{1C033C}\textbf{Databases \& Processing:} PostgreSQL, Hive, Redis, DynamoDB \\[3pt]
+\color[HTML]{1C033C}\textbf{Frameworks \& Tools:} Django, Gin, Grafana, Looker, OpenTelemetry, Jira, CMake, Bash \\[3pt]
+
 
 % Experience
 \section{Work Experience}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{{Autodesk, Bangalore}} \hfill \color[HTML]{371e77} Dec 2024 - Present \\[4pt]
-\color[HTML]{371e77}\textbf{\textit{Principal Engineer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
+\color[HTML]{371e77}\textbf{\textit{Principal Software Engineer}}\ \hfill \color[HTML]{4B28A4} \\[5pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
-        \item Leading a team 6 engineers, owning sprint planning, backlog refinement, and on-time delivery of scalable backend services.
-        \item Advocating and enforcing best practices in code quality, CI/CD, observability and security.
-        \item Architecting backend systems with focus on scalability, cost-efficieny and maintainability.
-        \item AWS, EC2, S3, EMR, Hive, Presto, Qubole, Kafka, Druid, Zookeeper, MySQL, Kubernetes, Docker, Bazel
+        \item Led a team of 6 engineers to deliver backend services on time by owning agile ceremonies (sprint planning, backlog grooming) and improving release velocity by 50\%.
+        \item Advocated best practices in CI/CD, observability and secure-coding, resulting in 40\% reduction in post-deploy issues and improved audit compliance.
+        \item Architected a distributed backend system for scalability and cost-efficiency—enabled 3x scale-out and reduced infra spend 25\% via optimized service decomposition.
+
     \end{itemize}
 \end{minipage}
 \end{tabularx}
@@ -105,11 +104,10 @@ Principal Software Engineer with 8+ years of experience in backend engineering, 
 \color[HTML]{371e77}\textbf{\textit{Senior Software Engineer}}\ \hfill \color[HTML]{4B28A4} Nov 2019 - Nov 2024\\[5pt]
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
-        \item Designed and implemented a system to detect over 1M+ non-compliant users, aiding license compliance.
+        \item Designed a telemetry-based license compliance system that detected 1M+ non-compliant users, enabling targeted enforcement, contributing to 60M+ in recovered revenue.
         \item Drove secure development practices as the team's Security Champion, aligning with enterprise security goals.
-        \item Developed binary tampering detection solution, reducing pirated softwares by 70\%.
+        \item Built a tampering detection system using secure hashing and telemetry triggers—cut software piracy by 70\% across distributed installations.
         \item Promoted engineering excellence across design, testing, and deployment pipelines.
-        \item AWS, EC2, S3, EMR, Hive, Presto, Qubole, Kafka, Druid, Zookeeper, MySQL, Kubernetes, Docker, Bazel
     \end{itemize}
 \end{minipage}
 \end{tabularx}
@@ -120,9 +118,10 @@ Principal Software Engineer with 8+ years of experience in backend engineering, 
 \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
         \item Engineered dynamic deception endpoints used by 100+ enterprise customers for threat detection.
-        \item Reduced CI/CD pipeline flakiness by 60\%, enabling faster and more reliable releases.
-        \item Mentored junior engineers, enhancing team productivity and capability.
-        \item <mention tools here>      
+        \item Reduced CI/CD flakiness by 60\% by optimizing Jenkins pipeline steps, improving release confidence and delivery frequency. 
+        \item Re-architected legacy system into modular services with improved test coverage, reducing deployment time by 40\% and enabling parallel development. 
+        \item Mentored junior engineers through onboarding, code reviews, and technical guidance—scaling team delivery velocity by 3x. 
+              
     \end{itemize}
 \end{minipage}
 \end{tabularx}
@@ -132,20 +131,17 @@ Principal Software Engineer with 8+ years of experience in backend engineering, 
 \begin{tabularx}{\linewidth}{@{}X r@{}}
 \textbf{\textcolor[HTML]{1C033C}{Shri Mata Vaishno Devi University, J\&K}} & 
 \textcolor[HTML]{371e77}{Aug 2012 -- May 2016} \\
-\textcolor[HTML]{371e77}{B.Tech. in Computer Science and Engineering} & 
-\textcolor[HTML]{4B28A4} {\textbf{CGPA: 7.81/10}} \\
 \end{tabularx}
+\textcolor[HTML]{371e77}{B.Tech. in Computer Science and Engineering} $|$
+\textcolor[HTML]{4B28A4} {\textbf{CGPA: 7.81/10}} \\
 
 % Leadership and Volunteering
 \section{Awards \& Certifications}
 \begin{itemize}[leftmargin=1.5em, label={}]
     \item \textbf{Applause Recognition – Autodesk} \\
     Awarded for key contributions to renewals of client accounts valued at \$300 M.
-
     \item \textbf{Autobucks Awards – Autodesk} \\
     Recognized for leading strategic initiatives that drove measurable business and operational impact.
-
-    \item \textbf{Udacity Machine Learning Nanodegree}  Udacity Inc.
 \end{itemize}
 
 \end{document}
